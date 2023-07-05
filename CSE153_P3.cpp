@@ -4,6 +4,11 @@ Ross Hamey
 7/5/2023
 */
 
+// https://www.youtube.com/watch?v=bRzgnIBgGjw
+// (i usually record stuff i make and upload
+// it as an unlisted video, just incase i need
+// it for future reference / for some reason)
+
 // our include(s)
 #include <iostream>
 #include <string>
