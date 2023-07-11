@@ -4,6 +4,8 @@ Ross Hamey
 7/11/2023
 */
 
+// partial starting code was provided by Jill Courte (CSE153, Spring 2016)
+
 // https://youtu.be/1fm9VaFkzqU
 // (i usually record stuff i make and upload
 // it as an unlisted video, just incase i need
