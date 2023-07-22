@@ -132,8 +132,8 @@ void initializePalindromeArray(string name_arr[], bool palindrome_arr[], int len
 /*
 printResults func, which takes in a string array, a bool array, and a length,
 then iterates over the bool array to determine if the corresponding element at
-the same index in the string array is palindromic or not, and printing out a list
-of all palindromic strings
+the same index in the string array is palindromic or not, and printing out a table
+showing each name and whether it is a palindrome or not
 @param name_arr[], a populated string array of names
 @param palindrome_arr[], a populated bool array of the palindromic status of elements
 in name_arr
@@ -142,20 +142,32 @@ in name_arr
 */
 void printResults(string name_arr[], bool palindrome_arr[], int length)
 {
+    // header with formatting
     cout << setw(20) << "Name provided" << setw(20) << "Palindromic?" << endl;
+
+    // iterating over both arrays to get the value at the corresponding index, then
+    // printing it out into our table
     for (int i = 0; i < length; i ++) {
+
+        // initializing our variables (# of chars in our name and palindrome
+        // status in string format)
         int chars = name_arr[i].length();
         string palindromic_status = "";
 
+        // if our bool value at i is true, our name is a palindrome, so we edit
+        // our palindromic status accordingly. otherwise, it is not a palindrome ("No")
         if (palindrome_arr[i] == true) {
             palindromic_status = "Yes";
         } else {
             palindromic_status = "No";
         }
+
+        // printing out current line in the table with formatting user the # of chars in our name
         cout << setw(11) << "" << resetiosflags(ios::fixed) << name_arr[i] << setw(22 - chars) <<
                 "" << resetiosflags(ios::fixed) << palindromic_status << endl;
     }
 
+    // extra line for formatting
     cout << endl;
 }
 
