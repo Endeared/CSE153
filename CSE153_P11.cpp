@@ -90,7 +90,7 @@ void initializeNameArray(string name_arr[], int length)
     // assigning it to the array at index i
     for (int i = 0; i < length; i++) {
         string name_input = "";
-        cout << "Please enter a name (" << (length - i) << " names remaining): ";
+        cout << "Please enter a name (" << (length - i) << " name(s) remaining): ";
         cin >> name_input;
 
         name_arr[i] = name_input;
@@ -142,29 +142,21 @@ in name_arr
 */
 void printResults(string name_arr[], bool palindrome_arr[], int length)
 {
-    // initializing our initial string to build off, and creating a count var
-    string palindromic_names = "The following names are palindromic:\n";
-    int count = 0;
-
-    // iterating up until length, grabbing our bool val of our palindromic arr
-    // at the index of our iterator, and then adding the string val of our name
-    // arr at the index of our iterator do our initial string and incrementing
-    // the count
+    cout << setw(20) << "Name provided" << setw(20) << "Palindromic?" << endl;
     for (int i = 0; i < length; i ++) {
+        int chars = name_arr[i].length();
+        string palindromic_status = "";
+
         if (palindrome_arr[i] == true) {
-            palindromic_names += (name_arr[i] + "\n");
-            count += 1;
+            palindromic_status = "Yes";
+        } else {
+            palindromic_status = "No";
         }
+        cout << setw(11) << "" << resetiosflags(ios::fixed) << name_arr[i] << setw(22 - chars) <<
+                "" << resetiosflags(ios::fixed) << palindromic_status << endl;
     }
 
-    // if our count is greater than 0, palindromic names were found so we print
-    // our final string of the list of palindromic names, otherwise if the count
-    // is still 0 then no names were palindromic
-    if (count > 0) {
-        cout << palindromic_names << endl;
-    } else {
-        cout << "None of the names provided were palindromic.\n" << endl;
-    }
+    cout << endl;
 }
 
 /*
