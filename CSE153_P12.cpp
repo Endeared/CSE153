@@ -13,6 +13,8 @@ Ross Hamey
 
 using namespace std;
 
+void printResults(int speed, int temp);
+
 int main(int argc, char *argv[])
 {
     // here we declare / initialize all the variables
@@ -57,6 +59,9 @@ int main(int argc, char *argv[])
     int avg_speed = total_speed / total_days;
     int avg_temp = total_temp / total_days;
     printResults(avg_speed, avg_temp);
+
+    cin.ignore();
+    cin.get();
 }
 
 /*
