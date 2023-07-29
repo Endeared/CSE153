@@ -53,10 +53,9 @@ int main()
         int option = grabOption();
 
         // if our exit val and option val are equal (the user selected exit),
-        // then we set our display_menu bool to false and break out of the loop
+        // then we set our display_menu bool to false and do nothing else
         if (option == exit) {
             display_menu = false;
-            break;
         // otherwise, we get the vector index for our option (option - 1), and
         // get the amount of parts by calling grabAmount and passing in the part name
         // we then call displayCost to calculate and display the cost by passing in
